@@ -1,0 +1,473 @@
+/* ============= IMPORTANDO AS FONTES DO PROJETO ============= */
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Playfair */
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+/* =========================================================== */
+
+/* ============= HTLM ============= */
+html {
+    scroll-behavior: smooth;
+}
+/* ================================ */
+
+/* ============= ROOT ============= */
+:root {
+    --primeira-cor: #B9161A;
+    --segunda-cor: #F7550A;
+    --terceira-cor: #FFB84C;
+    --quarta-cor: #FDE0B6;
+    --quinta-cor: #C1D392;
+    --sexta-cor: #292E2B;
+}
+/* ================================ */
+
+/* ============= BODY ============= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    background-color: var(--terceira-cor);
+    font-size: 14px;
+}
+/* ================================ */
+
+/* ============= BARRA DE NAVEGAÇÃO ============= */
+.nav {
+    display: flex;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background-color: var(--primeira-cor);
+    background-attachment: scroll;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    color: var(--terceira-cor);
+    border-bottom: solid var(--terceira-cor) 7px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    z-index: 9999;
+}
+.nav__logo {
+    height: 80px;
+    width: 80px;
+    margin-left: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav__logo__img {
+    height: 60px;
+    width: 60px;
+
+}
+.nav__info {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    width: 700px;
+    align-items: end;
+    justify-content: center;
+    margin-right: 150px;
+    gap: 15px;
+}
+.nav__info__linha1 {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: var(--quarta-cor);
+}
+.nav__info__linha1__telefone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.nav__info__linha1__telefone__imagem {
+    height: 20px;
+    width: 20px;
+}
+.nav__info__linha2 {
+    height: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.nav__info__linha2__itens {
+    text-decoration: underline;
+    color: var(--quarta-cor);
+    transition: 600ms;
+}
+.nav__info__linha2__itens:hover {
+    color: #c3ad8e;
+    transition: 600ms;
+}
+.nav__info__linha2__botao {
+    padding: 6px;
+    font-weight: bolder;
+    border-radius: 20px;
+    width: 100px;
+    background-color: var(--terceira-cor);
+    border: none;
+    transition: 600ms;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.nav__info__linha2__botao:hover {
+    background-color: #d4983d;
+    transition: 600ms;
+}
+/* ============================================== */
+
+/* ============= CONTEÚDO PRINCIPAL ============= */
+.main {
+    display: flex;
+    height: 550px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+    top: 100px;
+    margin-bottom: 100px;
+}
+.main::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-image: url('/desenvolvimento-web/trabalho-01/images/banner.jpg');
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1;
+}
+.main__box {
+    height: 350px;
+    width: 600px;
+    margin-left: 150px;
+    background-color: var(--terceira-cor);
+    padding: 30px;
+    border: solid var(--primeira-cor) 7px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.main__box__titulo {
+    font-family: 'Playfair';
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--primeira-cor);
+}
+.main__box__texto {
+    color: var(--primeira-cor);
+}
+.main__box__botao {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: var(--primeira-cor);
+    width: 180px;
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 30px;
+    color: var(--terceira-cor);
+    border: none;
+    font-weight: bold;
+    transition: 600ms;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.main__box__botao:hover {
+    background-color: #8f1214;
+    transition: 600ms;
+}
+.main__box__hr {
+    background-color: var(--primeira-cor);
+    border-color: var(--primeira-cor);
+    width: 100%;
+}
+/* ============================================== */
+
+/* ============= SEÇÃO: IMAGENS ============= */
+.secao-imagens {
+    display: flex;
+    height: 220px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.secao-imagens__box {
+    height: 220px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+.secao-imagens__imagem-menor {
+    height: 100px;
+    width: 100px;
+}
+.secao-imagens__imagem-maior {
+    height: 150px;
+    width: 150px;
+}
+/* ========================================== */
+
+/* ============= SEÇÃO: SOBRE NÓS ============= */
+.secao-sobre {
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    
+}
+.secao-sobre__box {
+    display: flex;
+    height: 300px;
+    width: 55%;
+    background-color: var(--sexta-cor);
+    padding: 40px;
+    border-radius: 20px;
+    color: var(--terceira-cor);
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.secao-sobre__box__imagem {
+    animation: animacao01 4000ms infinite;
+}
+.secao-sobre__box__conteudo {
+    display: flex;
+    flex-direction: column;
+}
+.secao-sobre__box__conteudo__titulo {
+    font-family: 'Playfair', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    border-left: solid var(--terceira-cor) 5px;
+    text-indent: 20px;
+}
+/* ============================================ */
+
+/* ============= SEÇÃO: TABELA DE PREÇOS ============= */
+.secao-precos {
+    display: flex;
+    height: 900px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    color: var(--terceira-cor);
+    background-color: var(--sexta-cor)
+}
+.secao-precos__imagens {
+    margin-top: 70px;
+    display: flex;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.secao-precos__imagens__box {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.secao-precos__imagens__box-cima {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.secao-precos__imagens__box__imagem {
+    height: 120px;
+    width: 120px;
+    animation: animacao02 ease-in-out infinite 3000ms;
+}
+/* TABELA */
+.secao-precos__tabela {
+    width: 60%;
+    margin-top: 70px;
+}
+.secao-precos__tabela__box {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: solid var(--terceira-cor) 3px;
+    -moz-box-shadow: -10px 10px 10px var(--terceira-cor);
+    box-shadow: 10px 10px 10px 10px var(--terceira-cor);
+    -webkit-box-shadow: 0px 0px 30px var(--terceira-cor);  
+}
+.secao-precos__tabela__titulo {
+    text-align: center;
+    font-weight: bold;
+    color: var(--terceira-cor);
+    font-size: 48px;
+    font-family: 'Playfair', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+}
+.secao-precos__tabela__box__coluna {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 180px 180px;
+    grid-template-rows:  50px 50px 50px 50px;
+
+}
+.secao-precos__tabela__box__coluna__item {
+    border: dotted var(--terceira-cor) 2px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    background-color: var(--sexta-cor);
+}
+.secao-precos__tabela__box__separador {
+    border: solid var(--terceira-cor) 2px;
+    height: 80%;
+}
+/* =================================================== */
+
+/* ============= SEÇÃO: EQUIPE ============= */
+.secao-equipe {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sexta-cor);
+}
+.secao-equipe__box {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    padding: 20px;
+    background-color: var(--terceira-cor);
+    border-radius: 10px;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+.secao-equipe__box__profissional {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+}
+.secao-equipe__box__profissional__imagem {
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    border: solid var(--sexta-cor) 5px;
+    animation: animacao03 ease-in-out infinite 3000ms;
+}
+.secao-equipe__box__profissional__titulo {
+    color: var(--sexta-cor);
+    font-size: 48px;
+    font-family: 'Playfair', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.secao-equipe__box__profissional__botoes {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.secao-equipe__box__profissional__botoes__botao {
+    width: 65px;
+    height: 25px;
+    background-color: var(--quarta-cor);
+    border-radius: 5px;
+    border: solid var(--sexta-cor) 4px;
+}
+.secao-equipe__box__descricao {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--sexta-cor);
+}
+/* ========================================= */
+
+/* ============= SEÇÃO: FORMULÁRIO ============= */
+.secao-formulario {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.secao-formulario__box {
+    height: 300px;
+    width: 50%;
+    background-color: var(--sexta-cor);
+    border: solid 2px;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    color: var(--terceira-cor);
+    font-weight: bold;
+    justify-content: center;
+    border-radius: 10px;
+}
+.secao-formulario__box__col {
+    padding: 20px;
+}
+.secao-formulario__box__col__item {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    gap: 5px;
+}
+.secao-formulario__box__col__item__input {
+    width: 200px;
+    border-radius: 5px;
+    padding: 6px
+}
+/* ============================================= */
+
+/* ============= ANIMAÇÕES ============= */
+@keyframes animacao01 {
+    0% {transform:rotate(10deg)}
+    50% {transform: rotate(-10deg)}
+    100% {transform: rotate(10deg);}
+}
+@keyframes animacao02 {
+    0%{transform: rotate(0deg) scale(1); filter: brightness(40%);}
+    50%{transform: rotate(0deg) scale(1.5); filter: brightness()}
+    100%{transform: rotate(360deg) scale(1); filter: brightness(40%);}
+}
+@keyframes animacao03 {
+    0%{transform: rotate(1.0) rotate(3deg);}
+    25%{transform: scale(1.05) rotate(-3deg);}
+    50%{transform: scale(1.0 rotate(0deg));}
+    75%{transform: scale(1.05) rotate(3deg);}
+    100%{transform: scale(1.0 rotate(-3deg));}
+}
+/* ===================================== */
